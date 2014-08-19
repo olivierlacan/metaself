@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
+
 ruby '2.1.2'
+
 gem 'rails', '4.1.4'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -18,6 +20,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'thin'
 gem 'zurb-foundation', '~> 4.3.2'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -32,16 +35,22 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
